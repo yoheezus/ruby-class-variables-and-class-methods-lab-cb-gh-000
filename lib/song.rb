@@ -24,7 +24,7 @@ class Song
     end
 
     def self.artists
-
+        @@artists_of_songs.uniq
     end
 
 end
