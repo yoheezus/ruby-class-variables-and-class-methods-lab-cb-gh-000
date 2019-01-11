@@ -23,10 +23,6 @@ class Song
         @@genres_of_songs.uniq
     end
 
-    def self.artists
-        @@artists_of_songs.uniq
-    end
-
     def self.genre_count
         genre_count = {}
         @@genres_of_songs.collect do |genre|
@@ -34,5 +30,18 @@ class Song
         end
         genre_count
     end
+
+    def self.artists
+        @@artists_of_songs.uniq
+    end
+
+    def self.artist_count
+        artist_count = {}
+        @@artists_of_songs.collect do |artist|
+            artist_count[artist] = @@artists_of_songs.count(artist)
+        end
+        artist_count
+    end
+
 
 end
