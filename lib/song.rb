@@ -32,6 +32,7 @@ class Song
         @@genres_of_songs.collect do |genre|
             genre_count[genre] = @@genres_of_songs.count(genre)
         end
+        genre_count
     end
-    genre_count
+
 end
